@@ -2,6 +2,11 @@ class Piece < ActiveRecord::Base
 	belongs_to :user
 	belongs_to :game
 
+  # I'm going to hold off on enums until we later merge in the other branches
+  # then upgrade to Rails 4.1
+  # enum active: [:captured, :fighting]
+  # enum color: { black:  0 , white: 1 }
+
   def self.types
     %w(Pawn Rook Knight Bishop Queen King)
   end
